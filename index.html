@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" onkeypress="keyPress()">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,6 +76,12 @@
             const max_ = document.querySelector("#max");
             const submit = document.querySelector("#submit");
             const numHolder = document.querySelector("h1");
+            
+            function keyPress(){
+                if (event.keyCode === 32){ 
+                    numHolder.textContent = chooseNum();
+                }
+            }
 
             function chooseNum(){
                 let max = parseInt(max_.value);
